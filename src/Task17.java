@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Task17 {
     public static void main(String[] args) {
-        Random random = new Random();
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
         System.out.print("Введите размер массива (целое положительное число): ");
         if (scanner.hasNextInt()) {
@@ -14,23 +14,12 @@ public class Task17 {
                 System.out.print("Введите значение (целое положительное число до 9): ");
                 if (scanner.hasNextInt()) {
                     int x = scanner.nextInt();
-                    if (x > 0) {
+                    if (x >= 0) {
                         int count = 0;
                         int[] mass = new int[n];
-                        for (int i = 0; i < mass.length; i ++) {
+                        for (int i = 0; i < mass.length; i++) {
                             mass[i] = random.nextInt(10);
-                            if (mass[i] == x && mass[i] != 0) {
-                                count++;
-                            }
-                        }
-                        System.out.println(Arrays.toString(mass));
-                        System.out.println("Ваше значение встречается в массиве " + count + " раз.");
-                    } else if (x == 0) {
-                        int count = 0;
-                        int[] mass = new int[n];
-                        for (int i = 0; i < mass.length; i ++) {
-                            mass[i] = random.nextInt(10);
-                            if (mass[i] == 0) {
+                            if (mass[i] == x) {
                                 count++;
                             }
                         }

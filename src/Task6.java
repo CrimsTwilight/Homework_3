@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class Task6 {
     public static void main(String[] args) {
-        int[] mass = new int[4];
         Random random = new Random();
+        int[] mass = new int[4];
         for (int i = 0; i < mass.length; i++) {
             mass[i] = random.nextInt(11);
         }
@@ -20,9 +20,9 @@ public class Task6 {
             }
         }
         if (check) {
-            System.out.println("Массив является строго возрастающей последовательностью!");
+            System.out.println("Массив является строго возрастающей последовательностью.");
         } else {
-            System.out.println("-");
+            System.out.println("Массив не является строго возрастающей последовательностью.");
         }
     }
 }
